@@ -123,9 +123,9 @@ RUN apt-get -y update
 RUN apt-get install -y wget xvfb unzip
 
 # Set up the Chrome PPA
-RUN apt install sudo
+RUN apt install sudo -y --no-install-recommends
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN sudo apt install ./google-chrome-stable_current_amd64.deb
+RUN sudo apt install ./google-chrome-stable_current_amd64.deb -y --no-install-recommends
 
 # Update the package list and install chrome
 RUN apt-get update -y

@@ -125,7 +125,7 @@ RUN apt-get install -y wget xvfb unzip
 # Set up the Chrome PPA
 RUN apt-get install sudo  
 RUN sudo -s
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
 
 # Update the package list and install chrome

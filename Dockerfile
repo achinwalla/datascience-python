@@ -116,6 +116,9 @@ ENV VERSION=6.5.0 \
 # Download Chrome and Driver
 # For Selenium Runs
 
+# Run update in case
+RUN apt-get -y update
+
 # We need wget to set up the PPA and xvfb to have a virtual screen and unzip to install the Chromedriver
 RUN apt-get install -y wget xvfb unzip
 

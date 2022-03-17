@@ -123,11 +123,9 @@ RUN apt-get -y update
 RUN apt-get install -y wget xvfb unzip
 
 # Set up the Chrome PPA
-RUN apt-get install sudo  
-RUN sudo apt-get install gpg-agent
-RUN sudo -s
-RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+RUN apt install sudo
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN sudo apt install ./google-chrome-stable_current_amd64.deb
 
 # Update the package list and install chrome
 RUN apt-get update -y

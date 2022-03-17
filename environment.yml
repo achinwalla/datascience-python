@@ -1,4 +1,4 @@
-name: datascience
+name: pusa-datascience
 channels:
 - defaults
 - conda-forge
@@ -10,6 +10,7 @@ dependencies:
 - boto3=1.11.15
 - bqplot=0.12.3
 - cffi=1.14.0
+- chromedriver-autoinstaller==0.3.1
 - click=6.7
 - cloudpickle=1.2.2
 - cython=0.29.15
@@ -47,6 +48,7 @@ dependencies:
 - seaborn=0.10.0
 - scipy=1.4.1
 - scikit-learn=0.22.1
+- selenium==4.1.2
 - statsmodels=0.11.0
 - urllib3=1.25.7
 - xgboost=0.81

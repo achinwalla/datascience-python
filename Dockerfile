@@ -124,7 +124,7 @@ RUN apt-get install -y wget xvfb unzip
 
 # Set up the Chrome PPA
 RUN apt-get install sudo  
-RUN apt install gpg-agent
+RUN sudo apt-get install gpg-agent
 RUN sudo -s
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list

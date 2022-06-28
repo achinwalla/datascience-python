@@ -34,6 +34,7 @@ dependencies:
 - numpy=1.17.3
 - openblas=0.3.6
 - pandas=0.25.3
+- parsons
 - patsy=0.5.1
 - pip=20.0.2
 - psycopg2=2.8.4
